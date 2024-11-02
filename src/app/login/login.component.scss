@@ -1,49 +1,147 @@
+$peach-light: #ffe5b4;
+$peach-dark: #ffab73;
+$font-color: #333;
+.header {
+  // padding: 60px;
+  text-align: center;
+  background: #d58e2bf1;
+  color: white;
+  font-size: 30px;
+}
+.body{
+  background: #eee3df;
+}
 .login-container {
     max-width: 400px;
-    margin: 100px auto;
+    background: #eee3df;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid lighten($peach-dark, 20%);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
+    text-align: center;
+    background-color: $peach-light;
+
+    .header {
+        margin-bottom: 20px;
+        
+        
+        .title {
+            font-size: 24px;
+            color: $font-color;
+        }
     }
-  
+
     .form-group {
-      margin-bottom: 15px;
-  
-      label {
-        display: block;
-        margin-bottom: 5px;
-      }
-  
-      input[type="text"],
-      input[type="password"] {
-        width: 350px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
+        margin-bottom: 15px;
+        text-align: left;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: $font-color;
+        }
+
+        input {
+            width: 350px;
+            padding: 10px;
+            border: 1px solid lighten($peach-dark, 30%);
+            border-radius: 4px;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: $peach-dark;
+                outline: none;
+            }
+        }
     }
-  
+
     button {
-      width: 100%;
-      padding: 10px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-  
-      &:disabled {
-        background-color: #ccc;
-      }
-  
-      &:hover:not(:disabled) {
-        background-color: #218838;
-      }
+        padding: 10px 15px;
+        background-color: $peach-dark;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($peach-dark, 10%);
+        }
+
+        &:disabled {
+            background-color: lighten($peach-dark, 20%);
+            cursor: not-allowed;
+        }
+    }$peach-light: #ffe5b4;
+    $peach-dark: #ffab73;
+    $font-color: #333;
+    
+    .header {
+        text-align: center;
+        background-color: black; // Black background for header
+        color: white; // White text color for header
+        padding: 15px 0; // Padding for header
     }
-  }
-  
+    
+    .login-container {
+        max-width: 400px;
+        margin: 20px auto; // Margin to separate from header
+        padding: 20px;
+        background: #eee3df;
+        border: 1px solid lighten($peach-dark, 20%);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        background-color: $peach-light;
+    
+        h2 {
+            margin-bottom: 20px; // Space between title and form
+            color: $font-color; // Title color
+        }
+    
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+    
+            label {
+                display: block;
+                margin-bottom: 5px;
+                color: $font-color;
+            }
+    
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid lighten($peach-dark, 30%);
+                border-radius: 4px;
+                transition: border-color 0.3s;
+    
+                &:focus {
+                    border-color: $peach-dark;
+                    outline: none;
+                }
+            }
+        }
+    
+        button {
+            padding: 10px 15px;
+            background-color: $peach-dark;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+    
+            &:hover {
+                background-color: darken($peach-dark, 10%);
+            }
+    
+            &:disabled {
+                background-color: lighten($peach-dark, 20%);
+                cursor: not-allowed;
+            }
+        }
+    }
+    
+}
